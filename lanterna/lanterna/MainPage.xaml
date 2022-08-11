@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lanterna.MainPage"
+             Title="Lanterninha"
+             BackgroundColor="#232323">
+    <Grid RowDefinitions="*,*,*,*,*,*,*,*" ColumnDefinitions="*,*">
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               Text="Lanterninha e resto"
+               Style="{StaticResource titulo}"/>
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                     x:Name="btnOnOff"
+                     Text="Lanterna"
+                     HeightRequest="100"
+                     WidthRequest="400"
+                     VerticalOptions="Start"
+                     HorizontalOptions="Center"
+                     BackgroundColor="#232323"
+                     TextColor="White"
+                     BorderWidth="2"
+                     BorderColor="gray"
+                     Clicked="btn_Clicked" />
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               Text="Situação da bateria: "
+               TextColor="Gray"
+               FontSize="30" />
+        <Label Grid.Row="4" Grid.Column="0" Text="Carga restante: " TextColor="Gray" FontSize="20"/>
+        <Label Grid.Row="5" Grid.Column="0" Text="Status da bateria: " TextColor="Gray" FontSize="20"/>
+        <Label Grid.Row="6" Grid.Column="0" Text="Fonte de energia: " TextColor="Gray" FontSize="20"/>
+
+        <Label Grid.Row="4" Grid.Column="1" x:Name="lbl_porcentagem_restante" TextColor="White" FontSize="20"/>
+        <Label Grid.Row="5" Grid.Column="1" x:Name="lbl_status" TextColor="White" FontSize="20"/>
+        <Label Grid.Row="6" Grid.Column="1" x:Name="lbl_fonte_carregamento" TextColor="White" FontSize="20"/>
+
+        <Label Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
+               x:Name="lbl_bateria_fraca"
+               TextColor="Red"
+               FontAttributes="Italic"
+               HorizontalTextAlignment="Center"/>
+
+    </Grid>
+
+
+
+</ContentPage>
